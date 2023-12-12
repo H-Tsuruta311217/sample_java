@@ -74,3 +74,39 @@
 //     System.out.println(lunch[2]); //    2番の要素を取り出して表示
 //   }
 // }
+
+
+// public class Main {
+//   public static void main(String[] args) {
+//     int score = 90;   //変数scoreの90を入れる
+//     if (score >= 80) {
+//         System.out.println("やったね！次もこの調子だ");
+//     }
+//   }
+// }
+
+
+// public class Main {
+//   public static void main(String[] args) {
+//     int score = 60;   //変数scoreの60を入れる
+//     if (score >= 80) {
+//         System.out.println("やったね！次もこの調子だ");
+//     } else {
+//         System.out.println("残念でした");
+//     }
+//   }
+// }
+
+
+import java.util.Random;
+public class Main {
+  public static void main(String[] args) {
+    Random rnd = new Random();     //ランダムな数を出す部品
+    int score = rnd.nextInt(100);   // 100までのランダムな数
+    if (score >= 90) {    // 90以上なら当たり
+        System.out.println("当たり！");
+    } else {
+        System.out.println("ハズレ");
+    }
+  }
+}
