@@ -156,12 +156,77 @@
 //   }
 // }
 
+// public class Main {
+//   public static void main(String[] args) {
+//     for(int i = 0; i <= 9; i++) {
+//       for(int j = 0; j <= 9; j++) {
+//         System.out.println(i+"x"+j+"="+(i*j));
+//       }
+//     }
+//   }
+// }
+
+// public class Main {
+//   public static void main(String[] args) {
+//     sayhello();
+//     sayhello();
+//     sayhello();   //あいさつを表示するメソッドの呼び出し
+//   }
+//   static void sayhello(){
+//     System.out.println("こんにちは");
+//   }
+// }
+
+
+// public class Main {
+//   public static void main(String[] args) {
+//     sayhello2("いろは");   //あいさつを表示するメソッドの呼び出し
+//     sayhello2("オオカミ先生");
+//   }
+//   static void sayhello2(String name){   //作成した名前付きであいさつを表示するメソッド
+//     System.out.println("こんにちは、" + name + "さん。");
+//   }
+// }
+
+// import java.util.Random;
+// public class Main {
+//   public static void main(String[] args) {
+//     int d = dice();    //メソッドを呼び出してサイコロの目を変数に入れる
+//     System.out.println("サイコロは、"+d);   //結果を表示
+//   }
+//   static int dice() {
+//     Random rnd = new Random();
+//     int ans = rnd.nextInt(6) + 1;
+//     return ans;    //作成したサイコロの目を返すメソッド
+//   }
+// }
+
+
+// public class Main {
+//   public static void main(String[] args) {
+//     double ans = postTaxPrice(980);     //金額を渡して消費税計算の結果を変数に入れる
+//     System.out.println(ans + "円");    //結果を表示
+//   }
+//   static double postTaxPrice(int price) {
+//     double ans = price * 1.08;
+//     return ans;    //渡された金額で消費税を計算して返すメソッド
+//   }
+// }
+
+
+import java.util.Random;
 public class Main {
   public static void main(String[] args) {
-    for(int i = 0; i <= 9; i++) {
-      for(int j = 0; j <= 9; j++) {
-        System.out.println(i+"x"+j+"="+(i*j));
-      }
+    for (int i = 0; i < 5; i++) {
+      makeQuestion();     //計算問題を表示するメソッドを繰り返し呼び出す
     }
   }
+  static void makeQuestion() {
+    Random rnd = new Random();
+    int a = rnd.nextInt(100);
+    int b = rnd.nextInt(100);
+    String question = a + "x" + b + "=?";
+    System.out.println(question);    //計算問題を表示するメソッド
+  }
 }
+
