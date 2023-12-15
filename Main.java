@@ -214,19 +214,44 @@
 // }
 
 
-import java.util.Random;
+// import java.util.Random;
+// public class Main {
+//   public static void main(String[] args) {
+//     for (int i = 0; i < 5; i++) {
+//       makeQuestion();     //計算問題を表示するメソッドを繰り返し呼び出す
+//     }
+//   }
+//   static void makeQuestion() {
+//     Random rnd = new Random();
+//     int a = rnd.nextInt(100);
+//     int b = rnd.nextInt(100);
+//     String question = a + "x" + b + "=?";
+//     System.out.println(question);    //計算問題を表示するメソッド
+//   }
+// }
+
+
+// import java.util.Random;
+// public class Main {
+//   public static void main(String[] args) {
+//     omikuji();    //おみくじメソッドを呼び出す
+//   }
+//   static void omikuji() {    //おみくじメソッド
+//     String [] kuji = {"大吉", "中吉", "吉", "末吉", "凶"};
+//     Random rnd = new Random();
+//     int id = rnd.nextInt(kuji.length);
+//     System.out.println(kuji[id]);
+//   }
+// }
+
+
+import java.time.ZonedDateTime;
+import java.time.ZoneId;
+
 public class Main {
   public static void main(String[] args) {
-    for (int i = 0; i < 5; i++) {
-      makeQuestion();     //計算問題を表示するメソッドを繰り返し呼び出す
-    }
-  }
-  static void makeQuestion() {
-    Random rnd = new Random();
-    int a = rnd.nextInt(100);
-    int b = rnd.nextInt(100);
-    String question = a + "x" + b + "=?";
-    System.out.println(question);    //計算問題を表示するメソッド
+    ZonedDateTime now = ZonedDateTime.now(ZoneId.of("Asia/Tokyo"));     //現在の時刻を変数nowに入れる
+    String nowTime = now.getHour() + ":" + now.getMinute() + ":" + now.getSecond();     //時分秒を取得し、つなげた文字列にする
+    System.out.println(nowTime);
   }
 }
-
